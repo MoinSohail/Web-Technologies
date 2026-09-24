@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>EduNova | Global Online Tutoring Platform - Top Performers</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2D3B7C;
+            --primary-dark: #1E2A5C;
+            --primary-light: #4A5B9E;
+            --secondary: #00A6A6;
+            --accent: #FF8C42;
+            --gold: #FFD700;
+            --silver: #C0C0C0;
+            --bronze: #CD7F32;
+            --gray-50: #F8FAFC;
+            --gray-100: #F1F5F9;
+            --gray-200: #E2E8F0;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1E293B;
+            --gray-900: #0F172A;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: var(--gray-50);
+            color: var(--gray-800);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* Professional gradient background */
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(ellipse at 20% 30%, rgba(45, 59, 124, 0.03) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 70%, rgba(0, 166, 166, 0.03) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* ==================== HEADER SECTION START ==================== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--gray-200);
+            flex-wrap: wrap;
+            gap: 1rem;
+            opacity: 0;
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon i {
+            font-size: 1.4rem;
+            color: white;
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--gray-700);
+            transition: color 0.2s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-btn {
+            background: var(--primary);
+            color: white !important;
+            padding: 0.5rem 1.25rem;
+            border-radius: 40px;
+        }
+
+        .nav-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+        }
+        /* ==================== HEADER SECTION END ==================== */
+
+        /* ==================== HERO SECTION START ==================== */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 4rem 0 5rem;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-content {
+            flex: 1;
+            min-width: 300px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.7s ease forwards 0.2s;
+        }
+
+        .hero-badge {
+            background: rgba(45, 59, 124, 0.1);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            margin-bottom: 1.25rem;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--gray-600);
+            margin-bottom: 2rem;
+            max-width: 550px;
+            line-height: 1.6;
+        }
+
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 14px rgba(45, 59, 124, 0.25);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(45, 59, 124, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid var(--gray-300);
+            color: var(--gray-700);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            transform: translateY(-2px);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .stat-item h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .stat-item p {
+            font-size: 0.8rem;
+            color: var(--gray-600);
+            font-weight: 500;
+        }
+
+        .hero-visual {
+            flex: 0.9;
+            min-width: 300px;
+            opacity: 0;
+            animation: fadeIn 0.8s ease forwards 0.3s;
+        }
+
+        .trust-card {
+            background: white;
+            border-radius: 28px;
+            padding: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
+            border: 1px solid var(--gray-200);
+        }
+
+        .trust-card h4 {
+            font-size: 1rem;
+            color: var(--gray-600);
+            margin-bottom: 1.25rem;
+            font-weight: 600;
+        }
+
+        .subject-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .subject-tag {
+            background: var(--gray-100);
+            padding: 0.6rem;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--gray-700);
+        }
+
+        .country-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .country-badge {
+            background: var(--gray-100);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        /* ==================== HERO SECTION END ==================== */
+
+        /* ==================== FEATURES SECTION START ==================== */
+        .section-header {
+            text-align: center;
+            margin: 4rem 0 2.5rem;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards 0.4s;
+        }
+
+        .section-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-header p {
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 24px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray-200);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .feature-card:nth-child(1) { animation-delay: 0.1s; }
+        .feature-card:nth-child(2) { animation-delay: 0.2s; }
+        .feature-card:nth-child(3) { animation-delay: 0.3s; }
+        .feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .feature-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.1);
+            border-color: var(--gray-300);
+        }
+
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(45, 59, 124, 0.1), rgba(0, 166, 166, 0.1));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-icon i {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-card p {
+            color: var(--gray-600);
+            line-height: 1.5;
+        }
+        /* ==================== FEATURES SECTION END ==================== */
+
+        /* ==================== TOP PERFORMERS SECTION START ==================== */
+        .performers-section {
+            margin: 4rem 0;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards 0.5s;
+        }
+
+        .performers-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .performers-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .performers-header p {
+            color: var(--gray-600);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .performers-grid {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .performer-card {
+            background: white;
+            border-radius: 28px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid var(--gray-200);
+            position: relative;
+            flex: 1;
+            min-width: 240px;
+            max-width: 280px;
+            cursor: pointer;
+        }
+
+        .performer-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 35px -12px rgba(0, 0, 0, 0.15);
+        }
+
+        .rank-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .rank-1 {
+            background: linear-gradient(135deg, #FFD700, #FFB347);
+        }
+        .rank-2 {
+            background: linear-gradient(135deg, #C0C0C0, #A0A0A0);
+        }
+        .rank-3 {
+            background: linear-gradient(135deg, #CD7F32, #B87333);
+        }
+
+        .performer-avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--gray-100), var(--gray-200));
+            border-radius: 50%;
+            margin: 1.5rem auto 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 3px solid var(--primary-light);
+        }
+
+        .performer-avatar i {
+            font-size: 3.5rem;
+            color: var(--primary);
+        }
+
+        .performer-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .performer-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 0.75rem 0 0.25rem;
+        }
+
+        .performer-subject {
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .performer-country {
+            color: var(--gray-600);
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .achievement {
+            background: var(--gray-100);
+            border-radius: 40px;
+            padding: 0.5rem 1rem;
+            margin: 1rem 0;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .score {
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-top: 0.5rem;
+        }
+
+        .score span {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: var(--gray-600);
+        }
+
+        .performer-card-1 {
+            transform: scale(1.02);
+            border: 2px solid var(--gold);
+        }
+
+        .inspiration-quote {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(45, 59, 124, 0.05), rgba(0, 166, 166, 0.05));
+            border-radius: 28px;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--gray-700);
+        }
+
+        .inspiration-quote i {
+            color: var(--secondary);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        /* ==================== TOP PERFORMERS SECTION END ==================== */
+
+        /* ==================== CTA SECTION START ==================== */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 28px;
+            padding: 3.5rem;
+            margin: 3rem 0 4rem;
+            text-align: center;
+            color: white;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards 0.6s;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-white {
+            background: white;
+            color: var(--primary);
+            padding: 0.9rem 2rem;
+            font-weight: 700;
+        }
+
+        .btn-white:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        /* ==================== CTA SECTION END ==================== */
+
+        /* ==================== FOOTER SECTION START ==================== */
+        .footer {
+            background: var(--gray-900);
+            color: white;
+            margin-top: 4rem;
+            border-radius: 28px 28px 0 0;
+            padding: 3rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .footer-col h3 {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-col p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-logo .logo-icon {
+            width: 36px;
+            height: 36px;
+        }
+
+        .footer-logo span {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .contact-info {
+            list-style: none;
+        }
+
+        .contact-info li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.9rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-info i {
+            width: 20px;
+            color: var(--secondary);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.7rem;
+        }
+
+        .footer-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .social-links a:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.7rem 1rem;
+            border-radius: 40px;
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: inherit;
+        }
+
+        .newsletter-form input::placeholder {
+            color: var(--gray-500);
+        }
+
+        .newsletter-form button {
+            background: var(--secondary);
+            border: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 40px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .newsletter-form button:hover {
+            background: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        /* ==================== FOOTER SECTION END ==================== */
+
+        /* Animations */
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.5rem;
+            }
+            .performers-grid {
+                flex-direction: column;
+                align-items: center;
+            }
+            .performer-card {
+                max-width: 100%;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            .cta-section {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="bg-gradient"></div>
+
+<!-- ==================== HEADER SECTION ==================== -->
+<div class="container">
+    <nav class="navbar">
+        <div class="logo">
+            <div class="logo-icon">
+                <i class="fas fa-graduation-cap"></i>
+            </div>
+            <span class="logo-text">EduNova</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Subjects</a></li>
+            <li><a href="#">Classes</a></li>
+            <li><a href="#">Countries</a></li>
+            <li><a href="#">Top Performers</a></li>
+            <li><a href="#" class="nav-btn">Get Started</a></li>
+        </ul>
+    </nav>
+</div>
+
+<!-- ==================== HERO SECTION ==================== -->
+<div class="container">
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-globe"></i> Global Learning Platform
+            </div>
+            <h1>Expert Tutors.<br><span>Any Subject.</span> Any Class.<br>Any Country.</h1>
+            <p class="hero-description">
+                EduNova connects students with world-class educators across 30+ countries. 
+                Personalized online tutoring for every subject, every grade level — delivered with excellence.
+            </p>
+            <div class="cta-group">
+                <button class="btn btn-primary" id="exploreBtn"><i class="fas fa-calendar-check"></i> Book Free Trial</button>
+                <button class="btn btn-outline" id="demoBtn"><i class="fas fa-play"></i> Watch Demo</button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <h3>5,000+</h3>
+                    <p>Active Students</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Parent Satisfaction</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Global Support</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="trust-card">
+                <h4><i class="fas fa-check-circle" style="color: var(--secondary);"></i> Trusted Worldwide</h4>
+                <div class="subject-grid">
+                    <div class="subject-tag">📐 Mathematics</div>
+                    <div class="subject-tag">🔬 Sciences</div>
+                    <div class="subject-tag">💻 Coding & AI</div>
+                    <div class="subject-tag">🌍 Languages</div>
+                    <div class="subject-tag">📚 Literature</div>
+                    <div class="subject-tag">🎨 Arts & Music</div>
+                    <div class="subject-tag">📊 Business</div>
+                    <div class="subject-tag">⚙️ Engineering Prep</div>
+                </div>
+                <div class="country-list">
+                    <span class="country-badge">🇺🇸 USA</span>
+                    <span class="country-badge">🇬🇧 UK</span>
+                    <span class="country-badge">🇦🇪 UAE</span>
+                    <span class="country-badge">🇮🇳 India</span>
+                    <span class="country-badge">🇨🇦 Canada</span>
+                    <span class="country-badge">🇦🇺 Australia</span>
+                    <span class="country-badge">🇩🇪 Germany</span>
+                    <span class="country-badge">🇸🇬 Singapore</span>
+                    <span class="country-badge">+22 more</span>
+                </div>
+                <p style="font-size: 0.75rem; color: var(--gray-600); margin-top: 1rem; text-align: center;">
+                    <i class="fas fa-certificate"></i> Accredited curriculum · IGCSE, IB, AP, CBSE, and more
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- ==================== FEATURES SECTION ==================== -->
+<div class="container">
+    <div class="section-header">
+        <h2>Comprehensive Learning Across Borders</h2>
+        <p>Delivering quality education regardless of location, curriculum, or learning style</p>
+    </div>
+
+    <div class="features-grid">
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+            <h3>All Classes & Grades</h3>
+            <p>From Kindergarten to Grade 12, university preparation, and professional certifications. Tailored learning paths for every stage.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-book"></i></div>
+            <h3>Diverse Subject Catalog</h3>
+            <p>35+ subjects including STEM, humanities, test prep (SAT/ACT), coding, languages, and competitive exam coaching.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <h3>Global Country Coverage</h3>
+            <p>Curriculum alignment for USA, UK, Canada, Australia, India, UAE, Singapore, and international baccalaureate systems.</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-chalkboard-user"></i></div>
+            <h3>Elite Certified Tutors</h3>
+            <p>500+ subject matter experts with advanced degrees, background checks, and proven teaching excellence across cultures.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== TOP PERFORMERS SECTION (INSPIRATION) ==================== -->
+<div class="container">
+    <div class="performers-section">
+        <div class="performers-header">
+            <h2>🏆 Top Performers of the Month</h2>
+            <p>Inspiring excellence — celebrating outstanding students who achieved remarkable milestones with EduNova</p>
+        </div>
+
+        <div class="performers-grid">
+            <!-- 1st Place Card -->
+            <div class="performer-card performer-card-1" onclick="showPerformerMessage('Sophia Chen', 'Mathematics', '98.5%', '1st')">
+                <div class="rank-badge rank-1">🥇</div>
+                <div class="performer-avatar">
+                    <i class="fas fa-crown" style="color: var(--gold);"></i>
+                </div>
+                <h3>Sophia Chen</h3>
+                <div class="performer-subject">📐 Advanced Mathematics</div>
+                <div class="performer-country"><i class="fas fa-map-marker-alt"></i> Singapore</div>
+                <div class="achievement">🎯 Perfect Score in IB Math HL</div>
+                <div class="score">98.5% <span>overall average</span></div>
+                <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--gray-600);"><i class="fas fa-quote-left"></i> Consistency and passion for problem-solving</p>
+            </div>
+
+            <!-- 2nd Place Card -->
+            <div class="performer-card" onclick="showPerformerMessage('David Okafor', 'Computer Science', '96.2%', '2nd')">
+                <div class="rank-badge rank-2">🥈</div>
+                <div class="performer-avatar">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>David Okafor</h3>
+                <div class="performer-subject">💻 Computer Science & AI</div>
+                <div class="performer-country"><i class="fas fa-map-marker-alt"></i> Nigeria / UK</div>
+                <div class="achievement">🏅 National Coding Olympiad Winner</div>
+                <div class="score">96.2% <span>project excellence score</span></div>
+                <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--gray-600);"><i class="fas fa-quote-left"></i> Building future tech solutions</p>
+            </div>
+
+            <!-- 3rd Place Card -->
+            <div class="performer-card" onclick="showPerformerMessage('Emma Laurent', 'Sciences', '94.8%', '3rd')">
+                <div class="rank-badge rank-3">🥉</div>
+                <div class="performer-avatar">
+                    <i class="fas fa-flask"></i>
+                </div>
+                <h3>Emma Laurent</h3>
+                <div class="performer-subject">🔬 Advanced Sciences (Bio/Chem)</div>
+                <div class="performer-country"><i class="fas fa-map-marker-alt"></i> France / Canada</div>
+                <div class="achievement">🌟 Research Scholarship Recipient</div>
+                <div class="score">94.8% <span>academic distinction</span></div>
+                <p style="font-size: 0.8rem; margin-top: 0.5rem; color: var(--gray-600);"><i class="fas fa-quote-left"></i> Curiosity leads to discovery</p>
+            </div>
+        </div>
+
+        <div class="inspiration-quote">
+            <i class="fas fa-quote-right"></i>
+            <p>These outstanding students represent the global excellence that EduNova nurtures — across different subjects, different classes, and different countries. Their journey inspires us all to reach higher.</p>
+            <p style="margin-top: 1rem; font-weight: 600;">— EduNova Academic Council</p>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== CTA SECTION ==================== -->
+<div class="container">
+    <div class="cta-section">
+        <h2>Start Your Global Learning Journey</h2>
+        <p>Get matched with the perfect tutor for your subject, class level, and country curriculum. First session completely free.</p>
+        <button class="btn btn-white" id="ctaMainBtn"><i class="fas fa-arrow-right"></i> Claim Free Session</button>
+    </div>
+</div>
+
+<!-- ==================== FOOTER SECTION ==================== -->
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-col">
+            <div class="footer-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <span>EduNova</span>
+            </div>
+            <p>Empowering students worldwide with personalized online tutoring across different subjects, classes, and countries. Excellence without borders.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">How It Works</a></li>
+                <li><a href="#">Subjects Offered</a></li>
+                <li><a href="#">Class Levels</a></li>
+                <li><a href="#">Countries We Serve</a></li>
+                <li><a href="#">Become a Tutor</a></li>
+                <li><a href="#">Top Performers</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Contact Details</h3>
+            <ul class="contact-info">
+                <li><i class="fas fa-envelope"></i> hello@edunova.com</li>
+                <li><i class="fas fa-phone-alt"></i> +1 (888) 765-4321</li>
+                <li><i class="fas fa-phone-alt"></i> +44 20 7946 0138</li>
+                <li><i class="fas fa-map-marker-alt"></i> 123 Learning Hub, London, UK</li>
+                <li><i class="fas fa-clock"></i> 24/7 Global Support</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Newsletter</h3>
+            <p>Stay updated with new subjects, classes, and global education insights.</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+            <p style="font-size: 0.75rem; margin-top: 1rem;"><i class="fas fa-shield-alt"></i> Privacy guaranteed</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2025 EduNova Education Technologies. All rights reserved. | Different subjects, different classes, different countries — one mission: accessible global education.</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="#" style="color: var(--gray-500); text-decoration: none;">Privacy Policy</a> | 
+            <a href="#" style="color: var(--gray-500); text-decoration: none;">Terms of Service</a> | 
+            <a href="#" style="color: var(--gray-500); text-decoration: none;">Cookie Preferences</a>
+        </p>
+    </div>
+</footer>
+
+<script>
+    // Interactive functions for Top Performers
+    function showPerformerMessage(name, subject, score, rank) {
+        const rankText = rank === '1st' ? '1st Place 🥇' : rank === '2nd' ? '2nd Place 🥈' : '3rd Place 🥉';
+        alert(`🏆 ${name} - ${rankText}\n\nSubject: ${subject}\nAchievement: ${score} excellence score\n\n"Inspiration: Dedication, consistent effort, and passion for learning made ${name} a top performer across global classrooms!"\n\nJoin EduNova and be the next inspiring story!`);
+    }
+
+    // Button interactions
+    document.getElementById('exploreBtn')?.addEventListener('click', () => {
+        alert("🎓 Welcome to EduNova! Book your free trial session. Our academic advisors will match you with the perfect tutor for your subject, class level, and country curriculum.");
+    });
+    
+    document.getElementById('demoBtn')?.addEventListener('click', () => {
+        alert("📹 Watch how EduNova works: Interactive whiteboard, personalized lesson plans, real-time feedback, and progress tracking across all subjects and grade levels.");
+    });
+    
+    document.getElementById('ctaMainBtn')?.addEventListener('click', () => {
+        alert("✨ Get your first session free! Choose from 35+ subjects, any class level (K-12 to college prep), and we'll align with your country's curriculum.");
+    });
+    
+    // Newsletter form submission
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = newsletterForm.querySelector('input').value;
+            if (email) {
+                alert(`✅ Thank you for subscribing! ${email} will receive updates on new subjects, classes, and global education resources.`);
+                newsletterForm.reset();
+            }
+        });
+    }
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+    
+    // Animate numbers on scroll for stats
+    const stats = document.querySelectorAll('.hero-stats .stat-item h3');
+    let animated = false;
+    
+    const animateNumbers = () => {
+        if (animated) return;
+        animated = true;
+        const targets = [5000, 98, 247];
+        stats.forEach((stat, index) => {
+            let current = 0;
+            const target = targets[index];
+            const increment = target / 50;
+            const interval = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    stat.textContent = target + (target === 98 ? '%' : '+');
+                    clearInterval(interval);
+                } else {
+                    stat.textContent = Math.floor(current) + (target === 98 ? '%' : '+');
+                }
+            }, 25);
+        });
+    };
+    
+    // Intersection Observer for stats
+    const heroSection = document.querySelector('.hero');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateNumbers();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    if (heroSection) observer.observe(heroSection);
+    
+    console.log("EduNova — Inspiring global excellence: Top performers showcase excellence across subjects, classes, and countries.");
+</script>
+</body>
+</html>
